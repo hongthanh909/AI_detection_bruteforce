@@ -46,7 +46,7 @@ Lấy API key tại: https://console.groq.com/keys
 ### Start API Server
 
 ```bash
-cd ssh-brute-force-detector
+cd ssh-brute-force-detector/backend
 python main.py
 ```
 
@@ -141,15 +141,18 @@ POST /api/ai/aggregated
 
 ```
 ssh-brute-force-detector/
-├── main.py              # FastAPI app
-├── generator.py         # Generate fake logs
-├── analyze.py           # Analyze logs
-├── time_filter.py       # Aggregate incidents
-├── ai_service.py        # Groq AI integration
-├── .env                 # API keys (not in git)
-├── .gitignore          # Git ignore file
-└── backend/
-    └── requirements.txt # Dependencies
+├── backend/
+│   ├── main.py              # FastAPI app
+│   ├── generator.py         # Generate fake logs
+│   ├── analyze.py           # Analyze logs
+│   ├── time_filter.py       # Aggregate incidents
+│   ├── ai_service.py        # Groq AI integration
+│   ├── test_generator.py    # Test code
+│   ├── .env                 # API keys (not in git)
+│   └── requirements.txt     # Dependencies
+├── .gitignore               # Git ignore file
+├── LICENSE                  # MIT License
+└── README.md                # This file
 ```
 
 ## 🔧 Development
